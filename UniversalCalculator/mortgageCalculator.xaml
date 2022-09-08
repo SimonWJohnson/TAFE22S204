@@ -1,0 +1,89 @@
+﻿<Page
+    x:Class="Calculator.mortgageCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Page.Resources>
+		<Style TargetType="StackPanel">
+			<Setter Property="Orientation" Value="Vertical"/>
+			<Setter Property="Margin" Value="20,20,20,20"/>
+			<Setter Property="MaxWidth" Value="600"/>
+			<Setter Property="Background" Value="White"/>
+		</Style>
+		<Style TargetType="TextBlock">
+			<Setter Property="Foreground" Value="Black" />
+			<Setter Property="FontWeight" Value="Light"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="Margin" Value="5,15,5,5"/>
+			<Setter Property="HorizontalAlignment" Value="Right"/>
+		</Style>
+		<Style TargetType="TextBox">
+			<Setter Property="Background" Value="OldLace"/>
+			<Setter Property="BorderBrush" Value="Gray"/>
+			<Setter Property="Margin" Value="5,5,5,5"/>
+			<Setter Property="Height" Value="35"/>
+			<Setter Property="Width" Value="210"/>
+			<Setter Property="HorizontalAlignment" Value="Left"/>
+		</Style>
+		<Style TargetType="Button">
+			<Setter Property="Margin" Value="5,5,5,5"/>
+			<Setter Property="Width" Value="100"/>
+			<Setter Property="Height" Value="40"/>
+			<Setter Property="Background" Value="Gray"/>
+			<Setter Property="FontWeight" Value="Light"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="VerticalAlignment" Value="Top"/>
+		</Style>
+	</Page.Resources>
+
+	<!--Grid Recurse-->
+	<Grid>
+		<!--Grid Definitions-->
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="250"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="160"/>
+			<RowDefinition Height="310"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<!--Brand Name-->
+		<StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"  HorizontalAlignment="Left">
+			<TextBlock Text="Mortgage Calculator" FontSize="50"></TextBlock>
+		</StackPanel>
+
+		<!--Text blocks stack panel-->
+		<StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right">
+			<TextBlock Text="PRINCIPAL BORROW : "></TextBlock>
+			<TextBlock Text="YEARS : "></TextBlock>
+			<TextBlock Text="MONTH : "></TextBlock>
+			<TextBlock Text="ANNUAL INTEREST RATE : "></TextBlock>
+			<TextBlock Text="MONTHLY INTEREST RATE : "></TextBlock>
+			<TextBlock Text="MONTHLY REPAYMENT : "></TextBlock>
+		</StackPanel>
+
+		<!--Text box stack panel-->
+		<StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left">
+			<TextBox x:Name="principalBorrowTextBox"></TextBox>
+			<TextBox x:Name="yearsTextBox"></TextBox>
+			<TextBox x:Name="monthTextBox"></TextBox>
+			<TextBox x:Name="annulaInterestRateTextBox"></TextBox>
+			<TextBox x:Name="monthlyInterestRateTextBox" IsReadOnly="True"></TextBox>
+			<TextBox x:Name="monthlyRepaymentTextBox" IsReadOnly="True"></TextBox>
+		</StackPanel>
+
+		<!--buttons stack pannel-->
+		<StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" >
+			<Button x:Name="calulateButton" Content="CALCULATE" Click="calulateButton_Click"/>
+			<Button x:Name="exitButton" Content="EXIT" Click="exitButton_Click"/>
+		</StackPanel>
+	</Grid>
+</Page>
