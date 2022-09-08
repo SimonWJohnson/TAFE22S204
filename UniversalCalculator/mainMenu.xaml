@@ -37,10 +37,10 @@
 				<Image x:Name="abacus" Source="Images/abacus.PNG"/>
 			</StackPanel>	
 			<StackPanel HorizontalAlignment="Center">
-				<Button x:Name="mathsButton" Content="Maths Calculator"/>
+				<Button x:Name="mathsButton" Content="Maths Calculator" Click="mathsButton_Click"/>
 				<Button x:Name="mortgageButton" Content="Mortgage Calculator"/>
 				<Button x:Name="currencyConverterButton" Content="Currency Converter"/>
-				<Button x:Name="shoppingCartButton" Content="Shopping Cart"/>
+				<Button x:Name="shoppingCartButton" Content="Shopping Cart" Click="shoppingCartButton_Click"/>
 				<Button x:Name="exitButton" Content="Exit"/>
 			</StackPanel>
 		</StackPanel>

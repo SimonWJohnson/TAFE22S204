@@ -20,21 +20,29 @@ namespace Calculator
 	/// <summary>
 	/// An empty page that can be used on its own or navigated to within a Frame.
 	/// </summary>
-	public sealed partial class mainMenu : Page
+	public sealed partial class shopping_cart_calculator : Page
 	{
-		public mainMenu()
+		public shopping_cart_calculator()
 		{
 			this.InitializeComponent();
 		}
 
-		private void mathsButton_Click(object sender, RoutedEventArgs e)
+		private void caculate_Click(object sender, RoutedEventArgs e)
 		{
-			this.Frame.Navigate(typeof(MainPage));
+			double totalTicketsCost;
+			double desktopCost;
+			double keyboardCost;
+			double mouseCost;
+			desktopCost = double.Parse(desktopcost.Text) * 1000;
+			keyboardCost = double.Parse(keyboard.Text) * 100;
+			mouseCost = double.Parse(mousecost.Text) * 80;
+			totalTicketsCost = desktopCost + keyboardCost + mouseCost;
+			totalticketcost.Text = totalTicketsCost.ToString("C");
 		}
 
-		private void shoppingCartButton_Click(object sender, RoutedEventArgs e)
+		private void exit_Click(object sender, RoutedEventArgs e)
 		{
-			this.Frame.Navigate(typeof(shopping_cart_calculator));
+
 		}
 	}
 }
