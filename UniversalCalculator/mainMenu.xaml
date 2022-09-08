@@ -38,7 +38,7 @@
 			</StackPanel>	
 			<StackPanel HorizontalAlignment="Center">
 				<Button x:Name="mathsButton" Content="Maths Calculator"/>
-				<Button x:Name="mortgageButton" Content="Mortgage Calculator"/>
+				<Button x:Name="mortgageButton" Content="Mortgage Calculator" Click="mortgageButton_Click"/>
 				<Button x:Name="currencyConverterButton" Content="Currency Converter"/>
 				<Button x:Name="shoppingCartButton" Content="Shopping Cart"/>
 				<Button x:Name="exitButton" Content="Exit"/>
