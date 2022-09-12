@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="Calculator.shopping_cart_calculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+		<StackPanel Orientation="Vertical" Margin="30,90,30,0">
+
+
+			<StackPanel  Height="85" Width="1220" Background="#00FFFF" >
+				<TextBlock Height="68" Text="Shopping Cart" TextWrapping="Wrap" Width="1220" FontSize="36" FontWeight="Bold" Margin="10,0,0,0"  />
+
+			</StackPanel>
+
+			<StackPanel Height="85" Width="1220" Background="#FF6347">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Height="68" Text="Product" TextWrapping="Wrap" Width="400" FontSize="36"   Margin="10,0,0,0"/>
+					<TextBlock Height="68" Text="Unit Price" TextWrapping="Wrap" Width="400" FontSize="36" />
+					<TextBlock Height="68" Text="Quantity" TextWrapping="Wrap" Width="420" FontSize="36"  />
+				</StackPanel>
+			</StackPanel>
+
+			<StackPanel Height="85" Width="1220" Background="#FFD700">
+				<StackPanel Orientation="Horizontal" >
+					<TextBlock Height="68" Text="Desktop(15 version)" TextWrapping="Wrap" Width="400" FontSize="36"  Margin="10,0,0,0" />
+					<TextBlock Height="68" Text="$1000" TextWrapping="Wrap" Width="400" FontSize="36"  />
+					<TextBox x:Name="desktopcost"  Height="55" TextWrapping="Wrap" FontSize="36" Width="250"  />
+				</StackPanel>
+			</StackPanel>
+
+			<StackPanel Height="85" Width="1220" Background="#ADFF2F">
+				<StackPanel Orientation="Horizontal" >
+					<TextBlock Height="68" Text="Keyboard" TextWrapping="Wrap" Width="400" FontSize="36" Margin="10,0,0,0" />
+					<TextBlock Height="68" Text="$100" TextWrapping="Wrap" Width="400" FontSize="36"   />
+					<TextBox x:Name="keyboard" Height="55" TextWrapping="Wrap" FontSize="36" Width="250"  />
+				</StackPanel>
+			</StackPanel>
+
+			<StackPanel Height="85" Width="1220" Background="#EE82EE">
+				<StackPanel Orientation="Horizontal" >
+					<TextBlock Height="68" Text="Mouse" TextWrapping="Wrap" Width="400" FontSize="36"   Margin="10,0,0,0" />
+					<TextBlock Height="68" Text="$80" TextWrapping="Wrap" Width="400" FontSize="36"  />
+					<TextBox x:Name="mousecost" Height="55" TextWrapping="Wrap" FontSize="36" Width="250"  />
+				</StackPanel>
+			</StackPanel>
+
+			<StackPanel Height="85" Width="1220" Background="#DCDCDC">
+				<StackPanel Orientation="Horizontal" >
+					<Button x:Name="caculate" Content="Calculate" Height="50" Width="150" Margin="10" Click="caculate_Click"/>
+					<TextBlock Height="50" Text="Total Ticket Cost:" TextWrapping="Wrap" Width="284" FontSize="36"  />
+					<TextBlock x:Name="totalticketcost" Height="55"  TextWrapping="Wrap" Width="180" FontSize="36" Margin="10" />
+					<Button x:Name="exit" Content="Exit" Height="50" Width="150" Margin="180,10,10,10" Click="exit_Click"/>
+
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</Page>

@@ -125,6 +125,9 @@
     <Compile Include="mainMenu.xaml.cs">
       <DependentUpon>mainMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="shopping_cart_calculator.xaml.cs">
+      <DependentUpon>shopping_cart_calculator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="mortgageCalculator.xaml.cs">
       <DependentUpon>mortgageCalculator.xaml</DependentUpon>
     </Compile>
@@ -195,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="shopping_cart_calculator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
