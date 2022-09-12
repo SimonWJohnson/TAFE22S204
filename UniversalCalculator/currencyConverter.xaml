@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="Calculator.currencyConverter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Page.Resources>
+		<Style TargetType="StackPanel">
+			<Setter Property="Margin" Value="10,10,10,10"/>
+			<Setter Property="MaxWidth" Value="800"/>
+			<Setter Property="MaxHeight" Value="800"/>
+			<Setter Property="HorizontalAlignment" Value="Left"/>
+			<Setter Property="VerticalAlignment" Value="Top"/>
+			<Setter Property="Background" Value="OldLace"/>
+		</Style>
+		<Style TargetType="TextBlock">
+			<Setter Property="Foreground" Value="Black" />
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="Margin" Value="10,10,10,10"/>
+		</Style>
+		<Style TargetType="TextBox">
+			<Setter Property="Background" Value="OldLace"/>
+			<Setter Property="BorderBrush" Value="Gray"/>
+			<Setter Property="MaxHeight" Value="50"/>
+			<Setter Property="MinWidth" Value="100"/>
+		</Style>
+		<Style TargetType="ComboBox">
+		</Style>
+		<Style TargetType="Button">
+			<Setter Property="Margin" Value="5,5,5,5"/>
+			<Setter Property="MinHeight" Value="50"/>
+			<Setter Property="MinWidth" Value="150"/>
+			<Setter Property="Background" Value="Gray"/>
+		</Style>
+	</Page.Resources>
+	
+    <Grid>
+		<StackPanel>
+			<TextBlock x:Name="currencyConversionTextBlock" Text="Currency Conversion Calculator" FontSize="24" FontWeight="Bold" Foreground="Blue" HorizontalAlignment="Center" Margin="10,10,10,10"/>
+			<StackPanel Orientation="Horizontal">
+				<StackPanel>
+					<TextBlock x:Name="amountTextBlock" Text="Amount $" FontSize="18" FontWeight="Bold" Foreground="Blue" HorizontalAlignment="Center" Margin="10,10,10,10"/>
+					<TextBox x:Name="amountInputTextBox" Width="200"/>
+				</StackPanel>
+				<StackPanel>
+					<TextBlock x:Name="fromTextBlock" Text="From" FontSize="18" FontWeight="Bold" Foreground="Blue" HorizontalAlignment="Center" Margin="10,10,10,10"/>
+					<ComboBox x:Name="fromComboBox" Width="200" SelectedValue="">
+						<x:String>US Dollar</x:String>
+						<x:String>Euro</x:String>
+						<x:String>British Pound</x:String>
+						<x:String>Indian Rupee</x:String>
+					</ComboBox>
+				</StackPanel>
+				<StackPanel>
+					<TextBlock x:Name="toTextBlock" Text="To" FontSize="18" FontWeight="Bold" Foreground="Blue" HorizontalAlignment="Center" Margin="10,10,10,10"/>
+					<ComboBox x:Name="toComboBox" Width="200" SelectedValue="">
+						<x:String>US Dollar</x:String>
+						<x:String>Euro</x:String>
+						<x:String>British Pound</x:String>
+						<x:String>Indian Rupee</x:String>
+					</ComboBox>
+				</StackPanel>
+			</StackPanel>
+			<StackPanel>
+				<TextBlock x:Name="fromCurrencyTextBlock" Text="fromCurrencyTextBlock"/>
+				<TextBlock x:Name="toCurrencyTextBlock" Text="toCurrencyTextBlock"/>
+				<TextBlock x:Name="unitToUnitConversionTextBlock" Text="unitToUnitConversionTextBlock"/>
+				<TextBlock x:Name="invertedUnitToUnitConversionTextBlock" Text="invertedUnitToUnitConversionTextBlock"/>
+			</StackPanel>
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+				<Button x:Name="currencyConversionButton" Content="Currency Conversion" Click="currencyConversionButton_Click"/>
+				<Button x:Name="exitButton" Content="Exit" Click="exitButton_Click"/>
+			</StackPanel>
+		</StackPanel>
+    </Grid>
+</Page>
