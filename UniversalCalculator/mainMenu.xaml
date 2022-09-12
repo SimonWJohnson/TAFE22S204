@@ -37,7 +37,7 @@
 				<Image x:Name="abacus" Source="Images/abacus.PNG"/>
 			</StackPanel>	
 			<StackPanel HorizontalAlignment="Center">
-				<Button x:Name="tripCalculatorButton" Content="Trip Calculator" /> // unable to modify C# code due to licence expiration
+				<Button x:Name="tripCalculatorButton" Content="Trip Calculator"/>
 				<Button x:Name="mathsButton" Content="Maths Calculator" Click="mathsButton_Click"/>
 				<Button x:Name="mortgageButton" Content="Mortgage Calculator" Click="mortgageButton_Click"/>
 				<Button x:Name="currencyConverterButton" Content="Currency Converter" Click="currencyConverterButton_Click_1"/>
