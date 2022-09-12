@@ -37,16 +37,6 @@ namespace Calculator
 			this.Frame.Navigate(typeof(shopping_cart_calculator));
 		}
 
-		private void currencyConverterButton_Click(object sender, RoutedEventArgs e)
-		{
-			this.Frame.Navigate(typeof(currencyConverter));
-		}
-
-		private void mathsButton_Click(object sender, RoutedEventArgs e)
-		{
-			this.Frame.Navigate(typeof(MainPage));
-		}
-
 		private void currencyConverterButton_Click_1(object sender, RoutedEventArgs e)
 		{
 			this.Frame.Navigate(typeof(currencyConverter));
@@ -55,6 +45,11 @@ namespace Calculator
 		private void mortgageButton_Click(object sender, RoutedEventArgs e)
 		{
 			this.Frame.Navigate(typeof(mortgageCalculator));
+		}
+
+		private void exitButton_Click(object sender, RoutedEventArgs e)
+		{
+			System.Environment.Exit(0);
 		}
 	}
 
